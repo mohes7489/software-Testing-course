@@ -21,7 +21,7 @@ jobs:
       - name: Clean and install dependencies
         run: |
           rm -rf node_modules
-          npm instal
+          npm install
 
       - name: run tests and generate report
         run: npx mocha --reporter mochawesome
