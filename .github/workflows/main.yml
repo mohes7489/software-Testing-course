@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: run tests and generate report
-        run: npm test
+        run: npx mocha --reporter mochawesome
 
       - name: Run coverage and send it to Coveralls
         run: npm run coverage
