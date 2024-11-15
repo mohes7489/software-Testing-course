@@ -19,7 +19,7 @@
   "nyc": {
   "all": true,
   "include": ["src/**/*.js"],
-  "exclude": ["**/test/**"],   
+  "exclude": ["**/test/**", "src/.internal/*.js"],   
   "reporter": ["html", "text"],
   "cache": true,
   "check-coverage": false,
