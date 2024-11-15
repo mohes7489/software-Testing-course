@@ -18,11 +18,11 @@
   },
   "nyc": {
   "all": true,
-  "include": ["src/*.js"],
+  "include": ["src/add.js"],
   "exclude": ["test/*.js"],   
   "reporter": ["html", "text"],
   "cache": true,
   "check-coverage": false,
-  "per-file": false
+  "per-file": true
 }
 }
