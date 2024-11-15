@@ -24,7 +24,7 @@ jobs:
           npm install
 
       - name: run tests and generate report
-        run: npx mocha --reporter mochawesome
+        run: npm run test
 
       - name: Run coverage and send it to Coveralls
         run: npm run coverage
