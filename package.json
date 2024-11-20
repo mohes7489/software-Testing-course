@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+
     "test": "nyc --reporter=lcov --reporter=text ./node_modules/.bin/mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -18,7 +19,7 @@
   },
   "nyc": {
   "all": true,
-  "include": ["src/*.js"],
+  "include": ["src/**/*.js"],
   "exclude": ["test/*.js"],   
   "reporter": ["html", "text", "lcov"],
   "cache": true,

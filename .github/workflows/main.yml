@@ -26,6 +26,12 @@ jobs:
       - name: run tests and generate report
         run: npm run test
 
+      - name: Run coverage and generate lcov.info
+        run: npm run coverage
+
+      - name: Normalize paths in lcov.info
+        run: sed -i 's#\\#/#g' coverage/lcov.info
+
       - name: Run coverage and send it to Coveralls
         run: npm run coverage
         env:
