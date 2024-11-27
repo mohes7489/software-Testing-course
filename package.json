@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test1": "mocha",
-    "test": "nyc --reporter=lcov --reporter=text --all ./node_modules/.bin/mocha",
-    "coverage": "nyc report --reporter=text-lcov --all | coveralls"
+    "test": "c8 mocha",
+    "coverage": "c8 report --reporter=text-lcov | coveralls"
   },
   "author": "",
   "license": "MIT",
@@ -15,17 +15,6 @@
     "chai": "^5.1.2",
     "coveralls": "^3.0.0",
     "mocha": "^10.8.2",
-    "nyc": "^17.1.0"
-  },
-  "nyc": {
-  "all": true,
-  "include": ["src/**/*.js"],
-  "exclude": ["test/*.js"],   
-  "reporter": ["html", "text", "lcov"],
-  "cache": true,
-  "check-coverage": false,
-  "per-file": true,
-  "useSpawnWrap": true,
-  "--show-process-tree": true
-}
+    "c8": "^7.14.0"
+  }
 }
