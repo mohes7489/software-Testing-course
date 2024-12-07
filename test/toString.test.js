@@ -4,6 +4,7 @@ import { expect } from "chai";
 describe("toString", function() {
     it("should convert number to string", function() {
         expect(toString(2)).to.equal("2");
+        expect(toString(123)).to.equal("123");
         expect(toString(-4)).to.equal("-4");
     });
 
@@ -35,7 +36,25 @@ describe("toString", function() {
         expect(toString(-0)).to.equal('-0');
     });
 
+    it("should return '0' for 0", function() {
+        expect(toString(0)).to.equal("0");
+    });
+
     it('should handle an empty array', () => {
         expect(toString([])).to.equal('');
+    });
+
+    // those are some special values
+
+    it("should return 'Infinity' for Infinity", function() {
+        expect(toString(Infinity)).to.equal("Infinity");
+    });
+
+    it("should return '-Infinity' for -Infinity", function() {
+        expect(toString(-Infinity)).to.equal("-Infinity");
+    });
+
+    it("should return 'NaN' for NaN", function() {
+        expect(toString(NaN)).to.equal("NaN");
     });
 })
