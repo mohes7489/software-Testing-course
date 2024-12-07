@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test1": "mocha",
     "test": "c8 mocha",
     "coverage": "c8 report --reporter=text-lcov | coveralls"
   },
