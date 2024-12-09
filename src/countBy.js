@@ -39,10 +39,3 @@ function countBy(collection, iteratee) {
 }
 
 export default countBy
-
-
-  [
-    { 'user': 'barney', 'active': true },
-    { 'user': 'betty', 'active': true },
-    { 'user': 'fred', 'active': false }
-  ]
