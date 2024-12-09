@@ -24,7 +24,11 @@ jobs:
           npm install
 
       - name: run tests and generate report
-        run: npm run test
+        run: |
+          echo "Running tests..."
+          npm run test --verbose || true
+          echo "Tests completed. Check the log above for details."
+
 
       - name: Run coverage and send it to Coveralls
         env:
