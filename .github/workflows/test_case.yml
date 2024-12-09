@@ -24,10 +24,7 @@ jobs:
           npm install
 
       - name: run tests and generate report
-        run: |
-          echo "Running tests..."
-          npm run test --verbose || true
-          echo "Tests completed. Check the log above for details."
+        run: npm run test --verbose > test-output.log 2>&1 || true
 
 
       - name: Run coverage and send it to Coveralls
