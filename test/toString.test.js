@@ -16,17 +16,17 @@ describe("toString", function() {
         expect(toString([1, [2, [3]]])).to.equal('1,2,3');
     });
 
-    /* it("should return an empty string when the input is null", function() {
+    it("should return an empty string when the input is null", function() {
         expect(toString(null)).to.equal('');       // failing test, expected '' but got 'null'
-    }); */
+    });
 
     it("should return the same string when the input is string", function() {
         expect(toString("test")).to.equal("test");
     });
 
-    /* it('should return an empty string for undefined', () => {
+    it('should return an empty string for undefined', () => {
         expect(toString(undefined)).to.equal('');   // failing test, expected '' but got 'undefined'
-    }); */
+    });
 
     it('should handle arrays containing null and undefined', () => {
         expect(toString([1, null, undefined, 3])).to.equal('1,,,3');
