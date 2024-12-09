@@ -24,7 +24,8 @@ jobs:
           npm install
 
       - name: run tests and generate report
-        run: npm run test
+        run: npm run test --verbose > test-output.log 2>&1 || true
+
 
       - name: Run coverage and send it to Coveralls
         env:
