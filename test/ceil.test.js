@@ -6,11 +6,11 @@ describe("ceil", function() {
         expect(ceil(5.05)).to.equal(6);
     });
 
-    it("it should round up the number with twp decimal points", function() {
+    it("it should round up the number with two decimal points", function() {
         expect(ceil(6.004, 2)).to.equal(6.01);
     });
 
-    it("it should round up the number with twp decimal points when the precision is negative", function() {
+    it("it should round up the number with two decimal points when the precision is negative", function() {
         expect(ceil(6040, -2)).to.equal(6100);
     });
 

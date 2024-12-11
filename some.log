@@ -1,0 +1,575 @@
+
+> software-testing-assignment@1.0.0 test
+> c8 mocha
+
+
+
+  add
+    ✔ should add two positive numbers
+    ✔ should add two negative numbers
+    ✔ should add zero to a numbers
+    ✔ should add negative number to a positive numbers
+    ✔ should return default value 0 when both arguments are undefined
+    ✔ should return the other number when one argument is undefined
+    ✔ should concatenate numeric strings
+    ✔ should concatenate non-numeric strings
+    ✔ should return NaN for non-numeric objects
+    ✔ should add number to onr element numeric array
+    ✔ should return NaN for non-numeric array
+
+  capitalize
+    ✔ it should capitalize the first letter
+    ✔ should capitalize a single-character string
+    ✔ should capitalize a string with all uppercase letters
+    ✔ should capitalize a mix of uppercase letters and lowercase letters
+    ✔ should return an empty string when input is an empty string
+    ✔ should handle boolean input
+    ✔ should handle numeric input
+    ✔ should handle null input
+    ✔ should handle an array input
+    ✔ should handle strings with leading or trailing spaces
+    ✔ should preserve the sign of -0
+
+  ceil
+    ✔ it should round the number up
+    ✔ it should round up the number with two decimal points
+    ✔ it should round up the number with two decimal points when the precision is negative
+    ✔ it should return the same integer if an integer is provided
+    ✔ it should round up to a whole integer (positive value)
+    ✔ it should round up to a whole integer (negative value)
+    ✔ should round up negative numbers with precision
+    ✔ should return 0 when rounding 0 up
+    ✔ should return 0 when rounding 0 up to 2 decimal places
+    ✔ should return NaN when input is not a number
+    ✔ should correctly round large positive numbers
+    ✔ should return the same number when precision is greater than the number's length
+
+  clamp
+    ✔ should clamp numbers within the given bounds
+    1) should clamp numbers within the given bounds
+    2) should clamp numbers within the given bounds
+    3) should return the number itself when it is within the bounds
+    ✔ should return the number itself when it is within the bounds
+    4) should return the number itself when it is within the bounds
+    ✔ should handle cases where lower and upper bounds are swapped
+    5) should handle non-numeric inputs gracefully, like string
+    6) should handle non-numeric inputs gracefully, like null
+    ✔ should handle non-numeric inputs gracefully, like Undefined
+    ✔ should handle non-numeric inputs gracefully, like NaN
+    ✔ should default bounds to 0 if they are invalid or missing
+    7) should handle negative lower and upper bounds
+    ✔ should handle negative lower and upper bounds
+    8) should handle negative lower and upper bounds
+    9) should handle large numbers without overflow
+    ✔ should handle large numbers without overflow
+    10) should handle large numbers without overflow
+    11) should clamp numbers with decimal precision
+    ✔ should clamp numbers with decimal precision
+    12) should clamp numbers with decimal precision
+    13) should handle extreme values like +Infinity
+    ✔ should handle extreme values like -Infinity
+    ✔ should return the bound when lower and upper are the same
+
+  countBy
+    14) should count items based on the iteratee result
+    15) should handle arrays of numbers
+    16) should count occurrences of strings based on their length
+    ✔ should return an empty object for empty collections
+    17) should handle objects as collections
+    18) should support custom iteratee functions
+    ✔ should handle invalid inputs gracefully
+    19) should correctly handle cases where all elements map to the same key
+    20) should correctly count elements when iteratee returns different data types
+
+  divide
+    21) should return 1.5 when divided 6 over 4
+    22) should return 3 when divided 6 over 2
+    ✔ should return 1 when divided 1 over 1
+    23) should return 0 when divided 0 over any number
+    24) should return -1 when divided -1 over 1
+    25) should return -2 when divided 6 over -3
+    ✔ should return 1 when divided -1 over -1
+    26) should return 0.5 when divided 1 over 2
+
+  drop
+    ✔ should return an empty array when input is an empty array
+    ✔ should return an empty array when input is null or undefined
+    ✔ should drop 1 element by default
+    ✔ should drop 2 elements when n is 2
+    ✔ should return an empty array when n is greater than the array length
+    ✔ should return the original array when n is 0
+    ✔ should return the original array when n is negative
+    ✔ should handle arrays with one element
+    ✔ should handle arrays with one element and n greater than 1
+    ✔ should handle empty array even when n is large
+    ✔ should handle non-integer n values by converting them to integers
+    ✔ should treat non-numeric n as 0
+
+  toInteger
+    ✔ should convert a positive decimal number to an integer
+    ✔ should convert a negative decimal number to an integer
+    ✔ should return the same number if it's already an integer
+    ✔ should convert Number.MIN_VALUE to 0
+    ✔ should return the largest safe integer for positive infinity
+    ✔ should return the smallest safe integer for negative infinity
+    ✔ should convert a numeric string to an integer
+    ✔ should return 0 for non-numeric strings
+    ✔ should return 0 for null, undefined, or NaN
+    ✔ should convert a single-element numeric array to an integer
+    ✔ should return 0 for multi-element or empty arrays
+    ✔ should return 0 for objects
+    ✔ should handle very large numbers
+    ✔ should handle very small numbers
+    ✔ should handle fractional results when the value is almost an integer
+
+  toNumber
+    ✔ should return the same number for a numeric input
+    ✔ should convert numeric strings to numbers
+    ✔ should handle binary, octal, and hexadecimal strings
+    ✔ should return NaN for invalid numeric strings
+    ✔ should convert objects with a valid valueOf method
+    ✔ should handle objects with no valid valueOf method
+    ✔ should return NaN for Symbol inputs
+    ✔ should return NaN for null and undefined
+    ✔ should handle boolean values
+    ✔ should convert single-element numeric arrays
+    ✔ should return NaN for multi-element or empty arrays
+    ✔ should handle values close to zero for both positive and negative
+    ✔ should return NaN for BigInt values
+
+  toString
+    ✔ should convert number to string
+    ✔ should convert array of numbers to string
+    ✔ should handle nested arrays
+    27) should return an empty string when the input is null
+    ✔ should return the same string when the input is string
+    28) should return an empty string for undefined
+    ✔ should handle arrays containing null and undefined
+    ✔ should preserve the sign of -0
+    ✔ should return '0' for 0
+    ✔ should handle an empty array
+    ✔ should return 'Infinity' for Infinity
+    ✔ should return '-Infinity' for -Infinity
+    ✔ should return 'NaN' for NaN
+
+
+  100 passing (36ms)
+  28 failing
+
+  1) clamp
+       should clamp numbers within the given bounds:
+
+      AssertionError: expected -5 to equal 5
+      + expected - actual
+
+      --5
+      +5
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:10:37)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  2) clamp
+       should clamp numbers within the given bounds:
+
+      AssertionError: expected -5 to equal +0
+      + expected - actual
+
+      --5
+      +0
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:14:36)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  3) clamp
+       should return the number itself when it is within the bounds:
+
+      AssertionError: expected 1 to equal 3
+      + expected - actual
+
+      -1
+      +3
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:18:35)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  4) clamp
+       should return the number itself when it is within the bounds:
+
+      AssertionError: expected -5 to equal 5
+      + expected - actual
+
+      --5
+      +5
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:26:36)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  5) clamp
+       should handle non-numeric inputs gracefully, like string:
+
+      AssertionError: expected -5 to equal 5
+      + expected - actual
+
+      --5
+      +5
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:36:43)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  6) clamp
+       should handle non-numeric inputs gracefully, like null:
+
+      AssertionError: expected -5 to equal +0
+      + expected - actual
+
+      --5
+      +0
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:41:39)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  7) clamp
+       should handle negative lower and upper bounds:
+
+      AssertionError: expected -20 to equal -10
+      + expected - actual
+
+      --20
+      +-10
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:59:40)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  8) clamp
+       should handle negative lower and upper bounds:
+
+      AssertionError: expected -20 to equal -5
+      + expected - actual
+
+      --20
+      +-5
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:67:39)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  9) clamp
+       should handle large numbers without overflow:
+
+      AssertionError: expected -100000 to equal 100000
+      + expected - actual
+
+      --100000
+      +100000
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:73:43)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  10) clamp
+       should handle large numbers without overflow:
+
+      AssertionError: expected -10000000000 to equal 100000
+      + expected - actual
+
+      --10000000000
+      +100000
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:81:44)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  11) clamp
+       should clamp numbers with decimal precision:
+
+      AssertionError: expected 1.2 to equal 3.5
+      + expected - actual
+
+      -1.2
+      +3.5
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:85:41)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  12) clamp
+       should clamp numbers with decimal precision:
+
+      AssertionError: expected 1.2 to equal 5.8
+      + expected - actual
+
+      -1.2
+      +5.8
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:93:41)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  13) clamp
+       should handle extreme values like +Infinity:
+
+      AssertionError: expected -100 to equal 100
+      + expected - actual
+
+      --100
+      +100
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/clamp.test.js:97:47)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  14) countBy
+       should count items based on the iteratee result:
+
+      AssertionError: expected { true: 1, false: +0 } to deeply equal { true: 2, false: 1 }
+      + expected - actual
+
+       {
+      -  "false": 0
+      -  "true": 1
+      +  "false": 1
+      +  "true": 2
+       }
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/countBy.test.js:12:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  15) countBy
+       should handle arrays of numbers:
+
+      AssertionError: expected { false: 2, true: 1 } to deeply equal { false: 3, true: 2 }
+      + expected - actual
+
+       {
+      -  "false": 2
+      -  "true": 1
+      +  "false": 3
+      +  "true": 2
+       }
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/countBy.test.js:19:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  16) countBy
+       should count occurrences of strings based on their length:
+
+      AssertionError: expected { '3': 1, '4': +0, '5': +0 } to deeply equal { '3': 2, '5': 2 }
+      + expected - actual
+
+       {
+      -  "3": 1
+      -  "4": 0
+      -  "5": 0
+      +  "3": 2
+      +  "5": 2
+       }
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/countBy.test.js:26:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  17) countBy
+       should handle objects as collections:
+
+      AssertionError: expected { false: 1, true: 1 } to deeply equal { false: 2, true: 2 }
+      + expected - actual
+
+       {
+      -  "false": 1
+      -  "true": 1
+      +  "false": 2
+      +  "true": 2
+       }
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/countBy.test.js:37:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  18) countBy
+       should support custom iteratee functions:
+
+      AssertionError: expected { false: 1, true: 1 } to deeply equal { false: 2, true: 2 }
+      + expected - actual
+
+       {
+      -  "false": 1
+      -  "true": 1
+      +  "false": 2
+      +  "true": 2
+       }
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/countBy.test.js:43:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  19) countBy
+       should correctly handle cases where all elements map to the same key:
+
+      AssertionError: expected { true: 2 } to deeply equal { true: 3 }
+      + expected - actual
+
+       {
+      -  "true": 2
+      +  "true": 3
+       }
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/countBy.test.js:54:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  20) countBy
+       should correctly count elements when iteratee returns different data types:
+
+      AssertionError: expected { number: 1, string: 1, boolean: +0 } to deeply equal { number: 2, string: 2, boolean: 1 }
+      + expected - actual
+
+       {
+      -  "boolean": 0
+      -  "number": 1
+      -  "string": 1
+      +  "boolean": 1
+      +  "number": 2
+      +  "string": 2
+       }
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/countBy.test.js:60:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  21) divide
+       should return 1.5 when divided 6 over 4:
+
+      AssertionError: expected 1 to equal 1.5
+      + expected - actual
+
+      -1
+      +1.5
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/divide.test.js:6:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  22) divide
+       should return 3 when divided 6 over 2:
+
+      AssertionError: expected 1 to equal 3
+      + expected - actual
+
+      -1
+      +3
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/divide.test.js:10:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  23) divide
+       should return 0 when divided 0 over any number:
+
+      AssertionError: expected 1 to equal +0
+      + expected - actual
+
+      -1
+      +0
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/divide.test.js:18:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  24) divide
+       should return -1 when divided -1 over 1:
+
+      AssertionError: expected 1 to equal -1
+      + expected - actual
+
+      -1
+      +-1
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/divide.test.js:22:33)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  25) divide
+       should return -2 when divided 6 over -3:
+
+      AssertionError: expected 1 to equal -2
+      + expected - actual
+
+      -1
+      +-2
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/divide.test.js:26:33)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  26) divide
+       should return 0.5 when divided 1 over 2:
+
+      AssertionError: expected 1 to equal 0.5
+      + expected - actual
+
+      -1
+      +0.5
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/divide.test.js:34:32)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  27) toString
+       should return an empty string when the input is null:
+
+      AssertionError: expected 'null' to equal ''
+      + expected - actual
+
+      -null
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/toString.test.js:20:35)
+      at process.processImmediate (node:internal/timers:511:21)
+
+  28) toString
+       should return an empty string for undefined:
+
+      AssertionError: expected 'undefined' to equal ''
+      + expected - actual
+
+      -undefined
+      
+      at Context.<anonymous> (file:///Users/yiannispanagiotopoulos/software-Testing-course/test/toString.test.js:28:40)
+      at process.processImmediate (node:internal/timers:511:21)
+
+
+
+-------------------------|---------|----------|---------|---------|-------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------------|---------|----------|---------|---------|-------------------
+All files                |   92.79 |    73.77 |   75.67 |   92.79 |                   
+ src                     |   98.12 |    79.85 |   83.33 |   98.12 |                   
+  add.js                 |     100 |      100 |     100 |     100 |                   
+  capitalize.js          |     100 |      100 |     100 |     100 |                   
+  ceil.js                |     100 |      100 |     100 |     100 |                   
+  clamp.js               |     100 |      100 |     100 |     100 |                   
+  countBy.js             |     100 |      100 |     100 |     100 |                   
+  divide.js              |     100 |      100 |     100 |     100 |                   
+  drop.js                |     100 |      100 |     100 |     100 |                   
+  isArguments.js         |   86.95 |      100 |       0 |   86.95 | 19-21             
+  isArrayLike.js         |     100 |      100 |     100 |     100 |                   
+  isBuffer.js            |     100 |     8.33 |     100 |     100 | 4-33              
+  isLength.js            |     100 |       40 |     100 |     100 | 29-30             
+  isObject.js            |     100 |      100 |     100 |     100 |                   
+  isObjectLike.js        |   88.88 |      100 |       0 |   88.88 | 23-25             
+  isSymbol.js            |     100 |      100 |     100 |     100 |                   
+  isTypedArray.js        |     100 |    33.33 |       0 |     100 | 9-27              
+  keys.js                |     100 |    66.66 |     100 |     100 | 33                
+  reduce.js              |     100 |      100 |     100 |     100 |                   
+  slice.js               |   86.95 |    45.45 |     100 |   86.95 | 24-25,30-31,33-34 
+  toFinite.js            |     100 |      100 |     100 |     100 |                   
+  toInteger.js           |     100 |      100 |     100 |     100 |                   
+  toNumber.js            |     100 |       85 |     100 |     100 | 52,56,62          
+  toString.js            |   95.23 |    92.85 |     100 |   95.23 | 36-37             
+  upperFirst.js          |     100 |      100 |     100 |     100 |                   
+ src/.internal           |    85.5 |    66.36 |   68.42 |    85.5 |                   
+  arrayLikeKeys.js       |   41.86 |      100 |       0 |   41.86 | 17-41             
+  arrayReduce.js         |      92 |       50 |     100 |      92 | 17-18             
+  asciiToArray.js        |      75 |      100 |       0 |      75 | 8-10              
+  baseAssignValue.js     |   73.91 |    66.66 |     100 |   73.91 | 12-17             
+  baseEach.js            |   67.74 |       75 |     100 |   67.74 | 19-28             
+  baseFor.js             |   92.59 |       75 |     100 |   92.59 | 21-22             
+  baseForOwn.js          |     100 |      100 |     100 |     100 |                   
+  baseReduce.js          |     100 |       75 |     100 |     100 | 17                
+  baseToNumber.js        |   91.66 |    83.33 |     100 |   91.66 | 19-20             
+  baseToString.js        |   84.84 |    63.63 |     100 |   84.84 | 23-25,27-28       
+  castSlice.js           |   72.22 |      100 |       0 |   72.22 | 12-16             
+  createCaseFirst.js     |     100 |    72.72 |     100 |     100 | 19,23,27          
+  createMathOperation.js |     100 |      100 |     100 |     100 |                   
+  createRound.js         |     100 |      100 |     100 |     100 |                   
+  freeGlobal.js          |     100 |      100 |     100 |     100 |                   
+  getTag.js              |   88.23 |    66.66 |     100 |   88.23 | 12-13             
+  hasUnicode.js          |     100 |      100 |     100 |     100 |                   
+  isIndex.js             |      64 |      100 |       0 |      64 | 15-23             
+  nodeTypes.js           |     100 |    11.76 |     100 |     100 | 4-13,20-25        
+  root.js                |     100 |    14.28 |     100 |     100 | 8-11              
+  stringToArray.js       |   72.22 |      100 |       0 |   72.22 | 12-16             
+  unicodeToArray.js      |   93.02 |      100 |       0 |   93.02 | 39-41             
+-------------------------|---------|----------|---------|---------|-------------------
